@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="김창현 - 시스템/콘텐츠 기획자 포트폴리오 및 이력서. 출시 3회 경험, 데이터 기반 기획.">
+    <title>김창현 | 시스템·콘텐츠 기획자</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===================== NAVIGATION ===================== -->
+    <nav id="main-nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">KCH</a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link active" data-section="about">기본정보</a></li>
+                <li><a href="#career" class="nav-link" data-section="career">출시이력</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">프로젝트</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">역량</a></li>
+                <li><a href="#awards" class="nav-link" data-section="awards">수상·활동</a></li>
+                <li><a href="#cover-letter" class="nav-link" data-section="cover-letter">자기소개서</a></li>
+            </ul>
+            <button class="nav-mobile-toggle" id="nav-toggle" aria-label="메뉴 열기">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-photo-wrapper">
+                <div class="hero-photo-ring"></div>
+                <img src="images/image1.jpeg" alt="김창현 프로필 사진" class="hero-photo" id="hero-photo">
+            </div>
+            <div class="hero-text">
+                <p class="hero-subtitle" id="hero-subtitle">System · Contents Planner</p>
+                <h1 class="hero-title" id="hero-title">
+                    <span class="hero-greeting">안녕하세요!</span>
+                    <span class="hero-name">분석적 사고로 출시 <em>3회</em>를 겪은</span>
+                    <span class="hero-name-highlight">김창현</span>입니다.
+                </h1>
+                <div class="hero-stats">
+                    <div class="stat-item" id="stat-releases">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-label">출시 경험</span>
+                    </div>
+                    <div class="stat-item" id="stat-playtime">
+                        <span class="stat-number" data-target="5107">0</span>
+                        <span class="stat-label">누적 플레이(분)</span>
+                    </div>
+                    <div class="stat-item" id="stat-users">
+                        <span class="stat-number" data-target="269">0</span>
+                        <span class="stat-label">누적 유저</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary" id="btn-view-projects">프로젝트 보기</a>
+                    <a href="#cover-letter" class="btn-secondary" id="btn-view-intro">자기소개서</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">01</span>기본 정보</h2>
+            <div class="about-grid">
+                <div class="info-card" id="info-contact">
+                    <div class="info-icon">📞</div>
+                    <div class="info-content">
+                        <h3>연락처</h3>
+                        <p>010-9270-6579</p>
+                        <p>kch633@naver.com</p>
+                    </div>
+                </div>
+                <div class="info-card" id="info-address">
+                    <div class="info-icon">📍</div>
+                    <div class="info-content">
+                        <h3>주소</h3>
+                        <p>의정부시 금신로 111</p>
+                    </div>
+                </div>
+                <div class="info-card" id="info-birth">
+                    <div class="info-icon">🎂</div>
+                    <div class="info-content">
+                        <h3>생년월일</h3>
+                        <p>2000. 07. 05</p>
+                    </div>
+                </div>
+                <div class="info-card" id="info-military">
+                    <div class="info-icon">🎖️</div>
+                    <div class="info-content">
+                        <h3>병역</h3>
+                        <p>군필 - 육군 병장 만기전역</p>
+                        <p class="info-sub">20.01.28 ~ 21.08.07</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="timeline-section">
+                <h3 class="subsection-title">학력</h3>
+                <div class="timeline">
+                    <div class="timeline-item" id="edu-highschool">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">2016.03 ~ 2019.02</span>
+                            <h4>발곡 고등학교</h4>
+                            <p>이과</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" id="edu-university">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">2019.02 ~ 2025.02</span>
+                            <h4>한림대학교</h4>
+                            <p>콘텐츠 IT, 빅데이터 전공 (게임 개발 전공)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" id="edu-academy">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">2025.09 ~ 2026.04</span>
+                            <h4>경일게임IT아카데미</h4>
+                            <p>생성형AI를 활용한 온라인 기획 3기 수료</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CAREER (출시 이력) ===================== -->
+    <section id="career" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title light"><span class="section-number">02</span>출시 이력</h2>
+            <div class="career-grid">
+                <!-- 물 아랫나리 -->
+                <div class="career-card" id="career-1">
+                    <div class="career-header">
+                        <span class="career-platform">메이플 월드</span>
+                        <span class="career-date">25.10.24</span>
+                    </div>
+                    <h3 class="career-title">물 아랫나리</h3>
+                    <span class="career-genre">비주얼 노벨</span>
+                    <div class="career-metrics">
+                        <div class="metric">
+                            <span class="metric-value">107</span>
+                            <span class="metric-label">누적 유저</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">132</span>
+                            <span class="metric-label">접속 횟수</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value highlight">1,914</span>
+                            <span class="metric-label">플레이(분)</span>
+                        </div>
+                    </div>
+                    <div class="career-roles">
+                        <span class="role-tag">팀장</span>
+                        <span class="role-tag">연출</span>
+                        <span class="role-tag">프로그래밍</span>
+                    </div>
+                </div>
+
+                <!-- RUNRANRUN! -->
+                <div class="career-card" id="career-2">
+                    <div class="career-badge">▲ 2.6x 성장</div>
+                    <div class="career-header">
+                        <span class="career-platform">메이플 월드</span>
+                        <span class="career-date">25.11.24</span>
+                    </div>
+                    <h3 class="career-title">RUNRANRUN!</h3>
+                    <span class="career-genre">미소녀 런 게임</span>
+                    <div class="career-metrics">
+                        <div class="metric">
+                            <span class="metric-value">162</span>
+                            <span class="metric-label">누적 유저</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">237</span>
+                            <span class="metric-label">접속 횟수</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value highlight">5,107</span>
+                            <span class="metric-label">플레이(분)</span>
+                        </div>
+                    </div>
+                    <div class="career-roles">
+                        <span class="role-tag">시스템 기획</span>
+                        <span class="role-tag">메인 개발</span>
+                        <span class="role-tag">PM</span>
+                    </div>
+                </div>
+
+                <!-- 둥둥아일랜드 -->
+                <div class="career-card" id="career-3">
+                    <div class="career-header">
+                        <span class="career-platform">itch.io</span>
+                        <span class="career-date">26.04.09</span>
+                    </div>
+                    <h3 class="career-title">둥둥아일랜드</h3>
+                    <span class="career-genre">PC 위젯 게임</span>
+                    <div class="career-metrics">
+                        <div class="metric">
+                            <span class="metric-value">378</span>
+                            <span class="metric-label">조회수</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">42</span>
+                            <span class="metric-label">다운로드</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value highlight">9%</span>
+                            <span class="metric-label">전환율</span>
+                        </div>
+                    </div>
+                    <div class="career-roles">
+                        <span class="role-tag">랜딩 페이지</span>
+                        <span class="role-tag">자율 행동 기획</span>
+                        <span class="role-tag">화면/환경 기획</span>
+                        <span class="role-tag">물고기 기획</span>
+                        <span class="role-tag">연출 기획</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROJECTS (슬라이드) ===================== -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">03</span>프로젝트</h2>
+            <p class="section-desc">프로젝트의 GIF를 클릭하면 링크로 이동합니다.</p>
+            
+            <div class="project-slider" id="project-slider">
+                <div class="slider-viewport">
+                    <div class="slider-track" id="slider-track">
+                        <!-- 프로젝트 1 -->
+                        <div class="slide" id="slide-1">
+                            <div class="slide-inner">
+                                <div class="slide-media">
+                                <a href="https://youtu.be/Q5XIdVOKSsM?si=_pxQMn7ErmnCiLA8" target="_blank">
+                                    <img src="images/2D.gif" alt="2D 멀티 로그라이크 플레이 영상">
+                                </a>
+                                </div>
+                                <div class="slide-info">
+                                    <span class="slide-tag">멀티 · 로그라이크 · 미출시</span>
+                                    <h3 class="slide-title">2D 멀티 로그라이크</h3>
+                                    <p class="slide-description">
+                                        팀으로 기획을 처음으로 담당해서 개발한 첫 개발작입니다.<br>
+                                        5명의 팀원으로 진행했으며, 팀장 및 총괄 기획을 담당했습니다.<br>
+                                        2가지 직업이며 멀티 플레이로 기획하였고 총 1스테이지를 개발했습니다.
+                                    </p>
+                                    <div class="slide-stats">
+                                        <div class="slide-stat accent">
+                                            <span class="slide-stat-value">첫 개발</span>
+                                            <span class="slide-stat-label">대학생</span>
+                                        </div>
+                                        <div class="slide-stat">
+                                            <span class="slide-stat-value">총괄 기획</span>
+                                            <span class="slide-stat-label">시스템, 콘텐츠</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 프로젝트 2 -->
+                        <div class="slide" id="slide-2">
+                            <div class="slide-inner">
+                                <div class="slide-media">
+                                <a href="https://maplestoryworlds.nexon.com/ko/play/de426f1968ea48bdb3fa9789f157d930" target="_blank">
+                                <img src="images/물아랫나리.gif" alt="물 아랫나리 플레이 영상">
+                                </a>
+                                </div>
+                                <div class="slide-info">
+                                    <span class="slide-tag">비주얼 노벨 · 메이플 월드 출시</span>
+                                    <h3 class="slide-title">물 아랫나리</h3>
+                                    <p class="slide-description">
+                                        팀장, 연출, 프로그래밍을 담당한 첫 출시작입니다. <br>
+                                        오컬트 장르의 비주얼 노벨입니다.<br>
+                                        선형적 구성으로 주로 1회 플레이가 이루어졌지만, <br>
+                                        이 경험에서 반복 플레이를 유도하는 순환 구조의 중요성을 배웠습니다.
+                                    </p>
+                                    <div class="slide-stats">
+                                        <div class="slide-stat">
+                                            <span class="slide-stat-value">107명</span>
+                                            <span class="slide-stat-label">누적 유저</span>
+                                        </div>
+                                        <div class="slide-stat accent">
+                                            <span class="slide-stat-value">1,914분</span>
+                                            <span class="slide-stat-label">플레이 시간</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 프로젝트 3 -->
+                        <div class="slide" id="slide-3">
+                            <div class="slide-inner">
+                                <div class="slide-media">
+                                <a href="https://maplestoryworlds.nexon.com/ko/play/7c72d484620545b7b77f2e4b42f7b3b6" target="_blank">
+                                <img src="images/RUNRANRUN!.gif" alt="RUNRANRUN 플레이 영상">
+                                </a>
+                                </div>
+                                <div class="slide-info">
+                                    <span class="slide-tag">미소녀 런 게임 · 메이플 월드 출시</span>
+                                    <h3 class="slide-title">RUNRANRUN!</h3>
+                                    <p class="slide-description">
+                                        시스템 기획과 메인 개발, PM을 담당했습니다.<br>
+                                        미소녀를 태그하면서 진행하는 런 게임입니다.<br>
+                                        전작의 교훈을 반영해 반복 플레이를 유도하는 순환 구조에 집중했으며,<br>
+                                        전작 대비 <strong>2.6배 성장한 5,107분</strong>의 누적 플레이 시간을 기록했습니다.
+                                    </p>
+                                    <div class="slide-stats">
+                                        <div class="slide-stat">
+                                            <span class="slide-stat-value">162명</span>
+                                            <span class="slide-stat-label">누적 유저</span>
+                                        </div>
+                                        <div class="slide-stat accent">
+                                            <span class="slide-stat-value">5,107분</span>
+                                            <span class="slide-stat-label">▲ 2.6x 성장</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 프로젝트 4 -->
+                        <div class="slide" id="slide-4">
+                            <div class="slide-inner">
+                                <div class="slide-media">
+                                <img src="images/PageofDesire.gif" alt="PageofDesire 플레이 영상">
+                                </div>
+                                <div class="slide-info">
+                                    <span class="slide-tag">덱빌딩 · RPG · 미출시</span>
+                                    <h3 class="slide-title">PageofDesire</h3>
+                                    <p class="slide-description">
+                                        부팀장, PM, 덱 편성, 인벤토리, 던전 콘텐츠, 보상 시스템을 기획했습니다. <br>
+                                        덱을 빌딩하고 던전을 깨며 점차 성장하는 RPG입니다.<br>
+                                        팀원간 소통과 기한에 맞추기 위해 <strong>임기응변</strong>이 중요했던 프로젝트였습니다.<br>
+                                        그 결과, 스토리 및 퀘스트 시스템을 변경하여 기한내 마칠 수 있었습니다.
+                                    </p>
+                                    <div class="slide-stats">
+                                        <div class="slide-stat accent">
+                                            <span class="slide-stat-value">소통</span>
+                                            <span class="slide-stat-label">Slack · 회의록</span>
+                                        </div>
+                                        <div class="slide-stat">
+                                            <span class="slide-stat-value">임기응변</span>
+                                            <span class="slide-stat-label">완수</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 프로젝트 5 -->
+                        <div class="slide" id="slide-5">
+                            <div class="slide-inner">
+                                <div class="slide-media">
+                                <a href="https://devel-rocket.itch.io/doongdoongisland" target="_blank">
+                                <img src="images/DoongDoong.gif" alt="둥둥아일랜드 플레이 영상">
+                                </a>
+                                </div>
+                                <div class="slide-info">
+                                    <span class="slide-tag">PC 위젯 게임 · itch.io · 글로벌 출시</span>
+                                    <h3 class="slide-title">둥둥아일랜드</h3>
+                                    <p class="slide-description">
+                                        랜딩 페이지 제작, 자율 행동/화면/환경/물고기/연출 기획을 담당했습니다. <br>
+                                        PC 위젯 게임으로 PC 한켠에 켜두고 지켜보는 자동화되는 게임입니다.<br>
+                                        유저 유입 경로를 직접 설계하여<br>
+                                        <strong>378회 조회수와 9% 다운로드 전환율</strong>을 달성했습니다. <br>
+                                        T-Log 데이터 분석을 통해 UX <strong>25%</strong>의 미사용률을 개선시켰습니다. 
+                                    </p>
+                                    <div class="slide-stats">
+                                        <div class="slide-stat">
+                                            <span class="slide-stat-value">378회</span>
+                                            <span class="slide-stat-label">조회수</span>
+                                        </div>
+                                        <div class="slide-stat accent">
+                                            <span class="slide-stat-value">9%</span>
+                                            <span class="slide-stat-label">전환율</span>
+                                        </div>
+                                        <div class="slide-stat">
+                                            <span class="slide-stat-value">42회</span>
+                                            <span class="slide-stat-label">다운로드</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn slider-prev" id="slider-prev" aria-label="이전 슬라이드">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <div class="slider-dots" id="slider-dots">
+                        <button class="dot active" data-index="0" aria-label="슬라이드 1"></button>
+                        <button class="dot" data-index="1" aria-label="슬라이드 2"></button>
+                        <button class="dot" data-index="2" aria-label="슬라이드 3"></button>
+                        <button class="dot" data-index="3" aria-label="슬라이드 4"></button>
+                        <button class="dot" data-index="4" aria-label="슬라이드 5"></button>
+                    </div>
+                    <button class="slider-btn slider-next" id="slider-next" aria-label="다음 슬라이드">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SKILLS (AI 활용 + 자격증) ===================== -->
+    <section id="skills" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title light"><span class="section-number">04</span>역량 · AI 활용</h2>
+            
+            <div class="ai-tools-grid">
+                <div class="ai-tool-card" id="tool-gemini">
+                    <div class="tool-logo-wrapper">
+                        <img src="images/image2.png" alt="Gemini" class="tool-logo">
+                    </div>
+                    <h4>Gemini (멀티 모델)</h4>
+                    <p>기획 보조 및 자동화</p>
+                    <span class="tool-detail">Gems 활용 번역 봇 제작, 기획서 제작 보조</span>
+                </div>
+                <div class="ai-tool-card" id="tool-imagefx">
+                    <div class="tool-logo-wrapper">
+                        <img src="images/image3.png" alt="ImageFX" class="tool-logo">
+                    </div>
+                    <h4>ImageFX (이미지 생성)</h4>
+                    <p>리소스 제작</p>
+                    <span class="tool-detail">'둥둥아일랜드' UI 에셋 제작</span>
+                </div>
+                <div class="ai-tool-card" id="tool-nano">
+                    <div class="tool-logo-wrapper">
+                        <img src="images/image4.png" alt="Nano Banana" class="tool-logo">
+                    </div>
+                    <h4>Nano Banana (이미지 생성)</h4>
+                    <p>리소스 제작</p>
+                    <span class="tool-detail">'둥둥아일랜드', '덱빌딩 RPG' 아이콘 제작</span>
+                </div>
+                <div class="ai-tool-card" id="tool-claude">
+                    <div class="tool-logo-wrapper">
+                        <img src="images/image5.jpeg" alt="Claude" class="tool-logo">
+                    </div>
+                    <h4>Claude (고성능 코딩)</h4>
+                    <p>웹 개발 및 퍼블리싱</p>
+                    <span class="tool-detail">프로토타입 / 홈페이지 / 랜딩페이지 제작</span>
+                </div>
+                <div class="ai-tool-card" id="tool-ludo">
+                    <div class="tool-logo-wrapper">
+                        <img src="images/image6.png" alt="Ludo" class="tool-logo">
+                    </div>
+                    <h4>Ludo (애니메이션 생성)</h4>
+                    <p>연출 고도화</p>
+                    <span class="tool-detail">'둥둥아일랜드' 연출 애니메이션 제작</span>
+                </div>
+                <div class="ai-tool-card" id="tool-suno">
+                    <div class="tool-logo-wrapper">
+                        <img src="images/image7.png" alt="Suno AI" class="tool-logo">
+                    </div>
+                    <h4>Suno AI (음악 제작)</h4>
+                    <p>리소스 제작</p>
+                    <span class="tool-detail">'물 아랫나리' BGM 제작</span>
+                </div>
+            </div>
+
+            <!-- Certificates & Language -->
+            <div class="cert-lang-grid">
+                <div class="cert-card" id="cert-mos">
+                    <div class="cert-icon">📜</div>
+                    <h4>MOS 2016 Master</h4>
+                    <p>Word / Excel / PowerPoint / Access</p>
+                    <span class="cert-date">2023.10 ~ 2024.06 · Microsoft</span>
+                </div>
+                <div class="cert-card" id="cert-lang">
+                    <div class="cert-icon">🌐</div>
+                    <h4>영어 (중급)</h4>
+                    <p>기본적인 읽기, 쓰기 가능</p>
+                    <span class="cert-date">랜딩페이지 영어 번역 작업 경험</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== AWARDS ===================== -->
+    <section id="awards" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">05</span>대외활동 · 수상</h2>
+            <div class="awards-grid">
+                <div class="award-card" id="award-1">
+                    <div class="award-year">2022</div>
+                    <div class="award-body">
+                        <h4>미래기술 특허 경진대회 <span class="award-badge bronze">동상</span></h4>
+                        <p>드론택배 특허 아이디어로 동상 수상</p>
+                        <span class="award-org">한림대학교</span>
+                    </div>
+                </div>
+                <div class="award-card" id="award-2">
+                    <div class="award-year">2023</div>
+                    <div class="award-body">
+                        <h4>LG AIMERS 해커톤 <span class="award-badge special">오프라인 진출</span></h4>
+                        <p>LG 머신러닝 해커톤 온라인 100위 안에 선정, 팀 전원 오프라인 진출</p>
+                        <span class="award-org">LG AI · 2023.01 ~ 03</span>
+                    </div>
+                </div>
+                <div class="award-card" id="award-3">
+                    <div class="award-year">2023</div>
+                    <div class="award-body">
+                        <h4>한림대학교 학술제 <span class="award-badge gold">금상</span></h4>
+                        <p>교육용 레이싱 게임으로 금상 수상</p>
+                        <span class="award-org">한림대학교 · 2023.11.21</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== COVER LETTER (슬라이드) ===================== -->
+    <section id="cover-letter" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title light"><span class="section-number">06</span>자기소개서</h2>
+            <p class="section-desc light">항목별 탭을 클릭하거나 화살표로 넘겨보세요.</p>
+
+            <div class="cl-wrapper">
+                <!-- Tab buttons -->
+                <div class="cl-tabs" id="cl-tabs">
+                    <button class="cl-tab active" data-cl="0" id="cl-tab-1">
+                        <span class="cl-tab-num">1</span>
+                        <span class="cl-tab-title">지원 동기 · 몰입 경험</span>
+                    </button>
+                    <button class="cl-tab" data-cl="1" id="cl-tab-2">
+                        <span class="cl-tab-num">2</span>
+                        <span class="cl-tab-title">뛰어난 업적</span>
+                    </button>
+                    <button class="cl-tab" data-cl="2" id="cl-tab-3">
+                        <span class="cl-tab-num">3</span>
+                        <span class="cl-tab-title">꾸준히 노력한 역량</span>
+                    </button>
+                    <button class="cl-tab" data-cl="3" id="cl-tab-4">
+                        <span class="cl-tab-num">4</span>
+                        <span class="cl-tab-title">핵심 역량</span>
+                    </button>
+                    <button class="cl-tab" data-cl="4" id="cl-tab-5">
+                        <span class="cl-tab-num">5</span>
+                        <span class="cl-tab-title">장단점</span>
+                    </button>
+                </div>
+
+                <!-- Content panels -->
+                <div class="cl-panels" id="cl-panels">
+                    <!-- Panel 1 -->
+                    <div class="cl-panel active" data-cl-panel="0" id="cl-panel-1">
+                        <div class="cl-panel-inner">
+                            <h3 class="cl-question">지원 동기 · 깊게 몰입했던 경험</h3>
+                            <blockquote class="cl-quote">"창의·도전·성과의 실천형 인재, 김창현입니다."</blockquote>
+                            <p>제한적인 데이터를 가상으로 세우는 <em>"창의"</em>, 증명하기 위해 실전에 뛰어드는 <em>"도전"</em>, 수치로 증명하는 <em>"성과"</em>의 과정을 지표를 분석하는 과정에서 이루었습니다.</p>
+                            
+                            <div class="cl-section">
+                                <h4><span class="cl-badge">가상 분석</span> 이탈 유저를 붙잡다</h4>
+                                <p>실제 지표는 접근이 제한적이며, 외부 툴로 확인하는 방식에도 비용이 요구되었습니다. 이러한 현실적 제약 속에서 가설을 수립하고 논리를 설계하는 역량을 훈련하기 위해서 가상 지표를 설정했습니다.</p>
+                                <p>먼저 중·고과금 유저의 이탈 원인을 분석했습니다. WAU 및 Stickiness 지표를 통해 <strong>'메타 고착화'</strong>가 핵심 문제로 도출했고, 이를 해결하기 위해 전략적 변수를 창출할 수 있는 <strong>'밴픽 아레나'</strong>를 기획했습니다.</p>
+                            </div>
+
+                            <div class="cl-section">
+                                <h4><span class="cl-badge">실무 검증</span> "왜 이 기능을 쓰지 않을까?"</h4>
+                                <p>'둥둥 아일랜드' 개발 시, 기획 의도를 검증하기 위한 T-Log 데이터 수집 환경을 설계했습니다.</p>
+                                <div class="cl-highlight-box">
+                                    <p><strong>문제:</strong> 유저의 80% 이상이 기본 크기를 유지 → 크기 조절 기능 인지 부족</p>
+                                    <p><strong>해결:</strong> 마우스 호버 시 커서 변경 + 창 테두리 시각적 피드백 추가</p>
+                                    <p class="cl-result"><strong>성과:</strong> 기본 크기 유지 비율 <em>25% 감소</em> → 55% 아래로</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2 -->
+                    <div class="cl-panel" data-cl-panel="1" id="cl-panel-2">
+                        <div class="cl-panel-inner">
+                            <h3 class="cl-question">가장 뛰어난 업적</h3>
+                            <blockquote class="cl-quote">"글로벌 플랫폼 출시 경험을 포함한 총 3회의 출시로 시장성을 검증하고, 기획 의도를 적중시키다."</blockquote>
+
+                            <div class="cl-section">
+                                <h4><span class="cl-badge accent">데이터 2.6배 성장</span> 지표로 증명하다</h4>
+                                <p>전작(1,914분) 대비 <strong>2.6배 이상 상승한 5,107분</strong>의 누적 플레이 시간을 기록했습니다.</p>
+                                <p>첫 출시작 '물 아랫나리'의 선형적 구성이 아쉬워, 차기작 'RUNRANRUN!'에서 유저들이 반복 플레이를 하도록 하는 순환 구조에 집중했습니다.</p>
+                                <div class="cl-data-compare">
+                                    <div class="cl-data-item">
+                                        <span class="cl-data-label">물 아랫나리</span>
+                                        <div class="cl-bar" style="--bar-width: 37%">
+                                            <span class="cl-bar-value">1,914분</span>
+                                        </div>
+                                    </div>
+                                    <div class="cl-data-item">
+                                        <span class="cl-data-label">RUNRANRUN!</span>
+                                        <div class="cl-bar accent" style="--bar-width: 100%">
+                                            <span class="cl-bar-value">5,107분</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cl-section">
+                                <h4><span class="cl-badge accent">전환율 9%</span> 유입까지 확장</h4>
+                                <p>유저의 유입 경로를 직접 설계하고 관리한 결과, <strong>378회 조회수와 9% 다운로드 전환율</strong>을 달성했습니다.</p>
+                                <p>데스크톱 위젯이라는 장르 특성상 '일상 속 힐링'을 원하는 타겟 유저의 니즈를 공략, 편안한 파스텔 톤의 색상과 부드러운 글씨체를 사용해 랜딩 페이지와 팀 홈페이지를 제작했습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3 -->
+                    <div class="cl-panel" data-cl-panel="2" id="cl-panel-3">
+                        <div class="cl-panel-inner">
+                            <h3 class="cl-question">꾸준히 노력해온 역량</h3>
+                            <blockquote class="cl-quote">"투명한 지표를 통해 팀원 모두가 하나의 성과를 바라보게 만드는 실전형 리더입니다."</blockquote>
+
+                            <p>약 10명 규모의 덱빌딩 RPG 프로젝트 기획 부팀장 당시, 한 팀원이 리더 그룹과의 소통 없이 해석·방향 차이로 개발 속도가 급격히 저하되는 위기를 겪었습니다.</p>
+
+                            <div class="cl-section">
+                                <h4><span class="cl-badge">정보 동기화</span></h4>
+                                <p>단순 구두 협의나 스크럼은 정보가 휘발되는 문제가 있었습니다. 모든 회의 내용 및 담당 기능의 로직과 가이드를 Slack에 상세히 명세화하고 스레드로 아카이빙했습니다.</p>
+                                <div class="cl-highlight-box">
+                                    <p class="cl-result">기획 해석 차이로 발생하던 불필요한 논쟁을 없앴고, <em>재작업률 40% 이상 단축</em>, 스프린트 일정 <em>100% 준수</em></p>
+                                </div>
+                            </div>
+
+                            <div class="cl-section">
+                                <h4><span class="cl-badge">전략적 우선순위 조정</span></h4>
+                                <p>WBS를 통해 인원, 기한, 시간을 한눈에 정리했습니다.</p>
+                                <ul class="cl-list">
+                                    <li><strong>수용:</strong> '테이블 구조 변경'은 일정 내 수용 가능 확인 → 담당자 배정, 마감 확정</li>
+                                    <li><strong>전환:</strong> '다갈래 던전' 등은 시간적 한계와 리소스 부족을 근거로 백로그로 전환</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4 -->
+                    <div class="cl-panel" data-cl-panel="3" id="cl-panel-4">
+                        <div class="cl-panel-inner">
+                            <h3 class="cl-question">핵심 역량</h3>
+                            <blockquote class="cl-quote">"AI와 툴의 전략적 결합으로 협업의 정밀도와 속도를 높이는 기획자"</blockquote>
+
+                            <div class="cl-section">
+                                <h4><span class="cl-badge accent">리소스 한계 돌파</span> 기간 50% 단축</h4>
+                                <div class="cl-highlight-box">
+                                    <p><strong>문제:</strong> 저작권 문제와 에셋 간 화풍 불일치로 약 4일의 기간이 예상</p>
+                                    <p><strong>해결:</strong> 생성형 AI 시드값·프롬프트 구조를 규격화한 가이드라인 배포</p>
+                                    <p class="cl-result"><strong>성과:</strong> 리소스 수급 시간 <em>4일 → 2일 (50% 단축)</em></p>
+                                </div>
+                            </div>
+
+                            <div class="cl-section">
+                                <h4><span class="cl-badge accent">추상의 실체화</span> 개발 공정 가속화</h4>
+                                <div class="cl-highlight-box">
+                                    <p><strong>해결:</strong> Claude를 활용해 핵심 기능을 넣은 HTML 프로토타입을 제작, 직관적으로 전달</p>
+                                    <p class="cl-result"><strong>성과:</strong> 기획 소통 시간 <em>약 1/3로 단축</em></p>
+                                </div>
+                            </div>
+
+                            <div class="cl-section">
+                                <h4><span class="cl-badge">툴 활용 능력</span> 정교한 설계</h4>
+                                <p>MOS Master 취득을 통해 다져진 오피스 활용 능력을 바탕으로, 쿠키런:킹덤 가상 지표 분석 시 엑셀을 활용해 가상 지표를 그래프로 시각화하여 분석서를 효과적으로 작성했습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 5 -->
+                    <div class="cl-panel" data-cl-panel="4" id="cl-panel-5">
+                        <div class="cl-panel-inner">
+                            <h3 class="cl-question">장점과 단점</h3>
+
+                            <div class="cl-section">
+                                <h4 class="cl-strength-title">💪 장점</h4>
+                                <blockquote class="cl-quote small">"목표를 완수하는 추진력, 팀의 시너지를 만드는 유연한 수용성을 겸비하다."</blockquote>
+                                <ul class="cl-list">
+                                    <li><strong>능동적 추진력:</strong> 예상치 못한 기술적 제약이나 기획 수정이 필요한 상황에서 대안을 먼저 제시하며 프로젝트를 완수</li>
+                                    <li><strong>높은 수용성:</strong> 동료의 건설적인 피드백을 적극적으로 수용하여 기획안을 정교하게 다듬으며 팀의 시너지를 극대화</li>
+                                </ul>
+                                <div class="cl-example">
+                                    <span class="cl-example-label">사례</span>
+                                    <p>덱 빌딩 RPG 제작 당시, 일정 부족 문제를 해결하고자 팀원과 합의 후, 스토리 전달 방식을 '퀘스트 기반'에서 '최초 던전 입장 시 출력'으로 변경해 기한 내 완수</p>
+                                </div>
+                            </div>
+
+                            <div class="cl-divider"></div>
+
+                            <div class="cl-section">
+                                <h4 class="cl-weakness-title">🔄 단점과 극복</h4>
+                                <blockquote class="cl-quote small">"개인의 확신보다 팀의 '합리적 합의'를 우선하며, 치열한 논의를 객관적 성과로 전환합니다."</blockquote>
+                                <p><strong>단점:</strong> 다소 자기 주장이 강해 보일 때가 있습니다.</p>
+                                <ul class="cl-list effort">
+                                    <li><strong>근거:</strong> 독단이 되지 않도록, 객관적인 지표나 근거를 제시</li>
+                                    <li><strong>보완:</strong> 충돌 의견을 '리스크 검증' 단계로 수용</li>
+                                    <li><strong>합의:</strong> 양측의 강점을 결합한 더 발전된 대안 도출</li>
+                                </ul>
+                                <div class="cl-example">
+                                    <span class="cl-example-label">사례</span>
+                                    <p>'둥둥아일랜드' 도움말 UI에서 의견 충돌 발생 → 레퍼런스 교차 검증 + 예비 유저 60명 리서치 수행 → 데이터 기반으로 기획 수정하여 성공적으로 마무리</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CL Slider controls -->
+                <div class="cl-controls">
+                    <button class="slider-btn cl-prev" id="cl-prev" aria-label="이전 항목">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <span class="cl-indicator" id="cl-indicator">1 / 5</span>
+                    <button class="slider-btn cl-next" id="cl-next" aria-label="다음 항목">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-name">김창현 · 시스템/콘텐츠 기획자</p>
+                <div class="footer-contacts">
+                    <span>📞 010-9270-6579</span>
+                    <span>✉ kch633@naver.com</span>
+                </div>
+                <p class="footer-copy">© 2026 Kim Changhyun. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
