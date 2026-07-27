@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="김창현 - 시스템/콘텐츠 기획자 자기소개서. 창의·도전·성과의 실천형 인재.">
+    <title>자기소개서 | 김창현</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Cover Letter page overrides */
+        body {
+            background: #f4f6fb;
+        }
+
+        .cl-page-header {
+            background: linear-gradient(135deg, #1a1e2e 0%, #2a3050 100%);
+            padding: 100px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cl-page-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(108,140,255,0.15), transparent 60%),
+                        radial-gradient(circle at 70% 30%, rgba(92,224,168,0.1), transparent 50%);
+        }
+
+        .cl-page-header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cl-page-title {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #e8eaf0;
+            margin-bottom: 12px;
+        }
+
+        .cl-page-subtitle {
+            font-size: 0.95rem;
+            color: #9ca3b8;
+            margin-bottom: 24px;
+        }
+
+        .cl-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #6c8cff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: 0.2s;
+            position: absolute;
+            top: 24px;
+            left: 24px;
+        }
+
+        .cl-back-link:hover {
+            color: #8aa4ff;
+            transform: translateX(-4px);
+        }
+
+        .cl-page-body {
+            max-width: 1140px;
+            margin: -24px auto 60px;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Override CL styles for light standalone page */
+        .cl-page-body .cl-tab {
+            background: #ffffff;
+            border-color: rgba(0,0,0,0.08);
+        }
+
+        .cl-page-body .cl-tab:hover {
+            border-color: rgba(108, 140, 255, 0.3);
+            background: #f8f9fd;
+        }
+
+/* 1. 탭 활성화 시 배경을 완전한 파란색으로 변경 */
+        .cl-page-body .cl-tab.active {
+            border-color: #6c8cff;
+            background: #6c8cff;
+        }
+
+        .cl-page-body .cl-tab-num {
+            background: rgba(0,0,0,0.06);
+            color: #5a6178;
+        }
+
+        /* 2. 활성화 탭 안의 숫자: 배경 흰색, 글씨 파란색으로 반전 */
+        .cl-page-body .cl-tab.active .cl-tab-num {
+            background: #ffffff;
+            color: #6c8cff;
+        }
+
+        .cl-page-body .cl-tab-title {
+            color: #5a6178;
+        }
+
+        /* 3. 활성화 탭 텍스트: 완전한 흰색으로 변경해 가독성 확보 */
+        .cl-page-body .cl-tab.active .cl-tab-title {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .cl-page-body .cl-panel-inner {
+            background: #ffffff;
+            border-color: rgba(0,0,0,0.08);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+        }
+
+        .cl-page-body .cl-question {
+            color: #1a1d2e;
+            border-bottom-color: rgba(0,0,0,0.08);
+        }
+
+        .cl-page-body .cl-panel-inner p {
+            color: #5a6178;
+        }
+
+        .cl-page-body .cl-panel-inner strong {
+            color: #1a1d2e;
+        }
+
+        .cl-page-body .cl-section h4 {
+            color: #1a1d2e;
+        }
+
+        .cl-page-body .cl-highlight-box {
+            background: rgba(108, 140, 255, 0.04);
+            border-color: rgba(108, 140, 255, 0.12);
+        }
+
+        .cl-page-body .cl-bar {
+            background: rgba(108, 140, 255, 0.12);
+        }
+
+        .cl-page-body .cl-bar-value {
+            color: #1a1d2e;
+        }
+
+        .cl-page-body .cl-list li {
+            color: #5a6178;
+        }
+
+        .cl-page-body .cl-divider {
+            background: rgba(0,0,0,0.08);
+        }
+
+        .cl-page-body .cl-example {
+            background: rgba(240, 160, 96, 0.05);
+            border-color: rgba(240, 160, 96, 0.12);
+        }
+
+        .cl-page-body .cl-controls .slider-btn {
+            border-color: rgba(0,0,0,0.08);
+            background: #ffffff;
+            color: #1a1d2e;
+        }
+
+        .cl-page-body .cl-controls .slider-btn:hover {
+            border-color: #6c8cff;
+            color: #6c8cff;
+        }
+
+        .cl-page-body .cl-indicator {
+            color: #5a6178;
+        }
+
+        .cl-page-body .cl-data-label {
+            color: #5a6178;
+        }
+
+        .cl-page-footer {
+            text-align: center;
+            padding: 32px 24px 48px;
+            color: #5a6178;
+            font-size: 0.85rem;
+        }
+
+        .cl-page-footer a {
+            color: #6c8cff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .cl-page-footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .cl-page-title {
+                font-size: 1.6rem;
+            }
+            .cl-page-header {
+                padding: 80px 16px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="cl-page-header">
+        <a href="index.html" class="cl-back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            포트폴리오로 돌아가기
+        </a>
+        <div class="container">
+            <h1 class="cl-page-title">자기소개서</h1>
+            <p class="cl-page-subtitle">김창현 · 시스템/콘텐츠 기획자</p>
+        </div>
+    </header>
+
+    <div class="cl-page-body">
+        <div class="cl-wrapper">
+            <!-- Tab buttons -->
+            <div class="cl-tabs" id="cl-tabs">
+                <button class="cl-tab active" data-cl="0" id="cl-tab-1">
+                    <span class="cl-tab-num">1</span>
+                    <span class="cl-tab-title">지원 동기 · 몰입 경험</span>
+                </button>
+                <button class="cl-tab" data-cl="1" id="cl-tab-2">
+                    <span class="cl-tab-num">2</span>
+                    <span class="cl-tab-title">뛰어난 업적</span>
+                </button>
+                <button class="cl-tab" data-cl="2" id="cl-tab-3">
+                    <span class="cl-tab-num">3</span>
+                    <span class="cl-tab-title">꾸준히 노력한 역량</span>
+                </button>
+                <button class="cl-tab" data-cl="3" id="cl-tab-4">
+                    <span class="cl-tab-num">4</span>
+                    <span class="cl-tab-title">핵심 역량</span>
+                </button>
+                <button class="cl-tab" data-cl="4" id="cl-tab-5">
+                    <span class="cl-tab-num">5</span>
+                    <span class="cl-tab-title">장단점</span>
+                </button>
+            </div>
+
+            <!-- Content panels -->
+            <div class="cl-panels" id="cl-panels">
+                <!-- Panel 1 -->
+                <div class="cl-panel active" data-cl-panel="0" id="cl-panel-1">
+                    <div class="cl-panel-inner">
+                        <h3 class="cl-question">선택한 직무에 지원한 동기가 무엇인지, 살아오면서 무언가에 "깊게 몰입했던 순간"의 경험</h3>
+                        <blockquote class="cl-quote">"창의·도전·성과의 실천형 인재, 김창현입니다."</blockquote>
+                        <p>제한적인 데이터를 가상으로 세우는 <em>"창의"</em>, 증명하기 위해 실전에 뛰어드는 <em>"도전"</em>, 수치로 증명하는 <em>"성과"</em>의 과정을 지표를 분석하는 과정에서 이루었습니다.</p>
+                        
+                        <div class="cl-section">
+                            <h4><span class="cl-badge">가상 분석</span> 이탈 유저를 붙잡다</h4>
+                            <p>실제 지표는 접근이 제한적이며, 외부 툴로 확인하는 방식에도 비용이 요구되었습니다. 이러한 현실적 제약 속에서 가설을 수립하고 논리를 설계하는 역량을 훈련하기 위해서 가상 지표를 설정했습니다.</p>
+                            <p>먼저 중·고과금 유저의 이탈 원인을 분석했습니다. WAU 및 Stickiness 지표를 통해 <strong>'메타 고착화'</strong>가 핵심 문제로 도출했고, 이를 해결하기 위해 전략적 변수를 창출할 수 있는 <strong>'밴픽 아레나'</strong>를 기획했습니다. 금지 캐릭터를 설정함으로써 매번 새로운 덱 조합을 고민하게 만드는 순환 구조를 설계했습니다.</p>
+                        </div>
+
+                        <div class="cl-section">
+                            <h4><span class="cl-badge">실무 검증</span> "왜 이 기능을 쓰지 않을까?"</h4>
+                            <p>위의 경험을 바탕으로 '둥둥 아일랜드' 개발 시, 기획 의도를 검증하기 위한 T-Log 데이터 수집 환경을 설계했습니다.</p>
+                            <div class="cl-highlight-box">
+                                <p><strong>문제 상황:</strong> 유저의 80% 이상이 기본 크기를 유지하고 있었습니다. 피드백과 로그를 대조한 결과, 유저들이 크기 조절 기능을 인지하지 못하거나, 조절 영역을 찾기 어려워한다는 점을 발견했습니다.</p>
+                                <p><strong>해결 방법:</strong> 조절 편의성을 높이기 위해 창 경계면에 마우스 호버시 커서 모양이 변경되도록 시각적 피드백을 추가하고, 조절 가능 영역을 직관적으로 보여주기 위해 창 테두리를 뜨게 했습니다.</p>
+                                <p class="cl-result"><strong>성과:</strong> 기본 크기 유지 비율 <em>25% 감소</em> → 업데이트 후 기본 크기 유지 비율이 55% 아래로 감소했습니다. 이는 위젯 게임의 핵심인 '공간 최적화' 만족도를 높이는 결과로 이어졌습니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="cl-section">
+                            <h4><span class="cl-badge">결론</span> 창의·도전·성과에 데이터의 확신을 더할 기획자</h4>
+                            <p>창의·도전·성과를 추구하는 실무적 태도는 '감'에 의존하는 기획이 아닌, 데이터로 증명하는 분석을 하며 쌓았습니다. 이러한 실무적 태도와 데이터를 이용하는 능력을 귀사에 쏟고싶습니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 2 -->
+                <div class="cl-panel" data-cl-panel="1" id="cl-panel-2">
+                    <div class="cl-panel-inner">
+                        <h3 class="cl-question">가장 뛰어난 업적</h3>
+                        <blockquote class="cl-quote">"글로벌 플랫폼 출시 경험을 포함한 총 3회의 출시로 시장성을 검증하고, 기획 의도를 적중시키다."</blockquote>
+
+                        <div class="cl-section">
+                            <h4><span class="cl-badge accent">데이터 2.6배 성장</span> 지표로 증명하다</h4>
+                            <p>전작(1,914분) 대비 <strong>2.6배 이상 상승한 5,107분</strong>의 누적 플레이 시간을 기록했습니다.</p>
+                            <p>첫 출시작 '물 아랫나리'의 선형적 구성이 아쉬워, 차기작 'RUNRANRUN!'에서 유저들이 반복 플레이를 하도록 하는 순환 구조에 집중했습니다.</p>
+                            <div class="cl-data-compare">
+                                <div class="cl-data-item">
+                                    <span class="cl-data-label">물 아랫나리</span>
+                                    <div class="cl-bar" style="--bar-width: 37%">
+                                        <span class="cl-bar-value">1,914분</span>
+                                    </div>
+                                </div>
+                                <div class="cl-data-item">
+                                    <span class="cl-data-label">RUNRANRUN!</span>
+                                    <div class="cl-bar accent" style="--bar-width: 100%">
+                                        <span class="cl-bar-value">5,107분</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cl-section">
+                            <h4><span class="cl-badge accent">전환율 9%</span> 유입까지 확장</h4>
+                            <p>유저의 유입 경로를 직접 설계하고 관리한 결과, <strong>378회 조회수와 9% 다운로드 전환율</strong>을 달성했습니다.</p>
+                            <p>데스크톱 위젯이라는 장르 특성상 '일상 속 힐링'을 원하는 타겟 유저의 니즈를 공략, 편안한 파스텔 톤의 색상과 부드러운 글씨체를 사용해 랜딩 페이지와 팀 홈페이지를 제작했습니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3 -->
+                <div class="cl-panel" data-cl-panel="2" id="cl-panel-3">
+                    <div class="cl-panel-inner">
+                        <h3 class="cl-question">꾸준히 노력해온 역량</h3>
+                        <blockquote class="cl-quote">"투명한 지표를 통해 팀원 모두가 하나의 성과를 바라보게 만드는 실전형 리더입니다."</blockquote>
+
+                        <p>약 10명 규모의 덱빌딩 RPG 프로젝트 기획 부팀장 당시, 한 팀원이 리더 그룹과의 소통 없이 해석·방향 차이로 개발 속도가 급격히 저하되는 위기를 겪었습니다.</p>
+
+                        <div class="cl-section">
+                            <h4><span class="cl-badge">정보 동기화</span></h4>
+                            <p>단순 구두 협의나 스크럼은 정보가 휘발되는 문제가 있었습니다. 모든 회의 내용 및 담당 기능의 로직과 가이드를 Slack에 상세히 명세화하고 스레드로 아카이빙했습니다.</p>
+                            <div class="cl-highlight-box">
+                                <p class="cl-result">기획 해석 차이로 발생하던 불필요한 논쟁을 없앴고, <em>재작업률 40% 이상 단축</em>, 스프린트 일정 <em>100% 준수</em></p>
+                            </div>
+                        </div>
+
+                        <div class="cl-section">
+                            <h4><span class="cl-badge">전략적 우선순위 조정</span></h4>
+                            <p>WBS를 통해 인원, 기한, 시간을 한눈에 정리했습니다.</p>
+                            <ul class="cl-list">
+                                <li><strong>수용:</strong> '테이블 구조 변경'은 일정 내 수용 가능 확인 → 담당자 배정, 마감 확정</li>
+                                <li><strong>전환:</strong> '다갈래 던전' 등은 시간적 한계와 리소스 부족을 근거로 백로그로 전환</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 4 -->
+                <div class="cl-panel" data-cl-panel="3" id="cl-panel-4">
+                    <div class="cl-panel-inner">
+                        <h3 class="cl-question">핵심 역량</h3>
+                        <blockquote class="cl-quote">"AI와 툴의 전략적 결합으로 협업의 정밀도와 속도를 높이는 기획자"</blockquote>
+
+                        <div class="cl-section">
+                            <h4><span class="cl-badge accent">리소스 한계 돌파</span> 기간 50% 단축</h4>
+                            <div class="cl-highlight-box">
+                                <p><strong>문제:</strong> 저작권 문제와 에셋 간 화풍 불일치로 약 4일의 기간이 예상</p>
+                                <p><strong>해결:</strong> 생성형 AI 시드값·프롬프트 구조를 규격화한 가이드라인 배포</p>
+                                <p class="cl-result"><strong>성과:</strong> 리소스 수급 시간 <em>4일 → 2일 (50% 단축)</em></p>
+                            </div>
+                        </div>
+
+                        <div class="cl-section">
+                            <h4><span class="cl-badge accent">추상의 실체화</span> 개발 공정 가속화</h4>
+                            <div class="cl-highlight-box">
+                                <p><strong>해결:</strong> Claude를 활용해 핵심 기능을 넣은 HTML 프로토타입을 제작, 직관적으로 전달</p>
+                                <p class="cl-result"><strong>성과:</strong> 기획 소통 시간 <em>약 1/3로 단축</em></p>
+                            </div>
+                        </div>
+
+                        <div class="cl-section">
+                            <h4><span class="cl-badge">툴 활용 능력</span> 정교한 설계</h4>
+                            <p>MOS Master 취득을 통해 다져진 오피스 활용 능력을 바탕으로, 쿠키런:킹덤 가상 지표 분석 시 엑셀을 활용해 가상 지표를 그래프로 시각화하여 분석서를 효과적으로 작성했습니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 5 -->
+                <div class="cl-panel" data-cl-panel="4" id="cl-panel-5">
+                    <div class="cl-panel-inner">
+                        <h3 class="cl-question">장점과 단점</h3>
+
+                        <div class="cl-section">
+                            <h4 class="cl-strength-title">💪 장점</h4>
+                            <blockquote class="cl-quote small">"목표를 완수하는 추진력, 팀의 시너지를 만드는 유연한 수용성을 겸비하다."</blockquote>
+                            <ul class="cl-list">
+                                <li><strong>능동적 추진력:</strong> 예상치 못한 기술적 제약이나 기획 수정이 필요한 상황에서 대안을 먼저 제시하며 프로젝트를 완수</li>
+                                <li><strong>높은 수용성:</strong> 동료의 건설적인 피드백을 적극적으로 수용하여 기획안을 정교하게 다듬으며 팀의 시너지를 극대화</li>
+                            </ul>
+                            <div class="cl-example">
+                                <span class="cl-example-label">사례</span>
+                                <p>덱 빌딩 RPG 제작 당시, 일정 부족 문제를 해결하고자 팀원과 합의 후, 스토리 전달 방식을 '퀘스트 기반'에서 '최초 던전 입장 시 출력'으로 변경해 기한 내 완수</p>
+                            </div>
+                        </div>
+
+                        <div class="cl-divider"></div>
+
+                        <div class="cl-section">
+                            <h4 class="cl-weakness-title">🔄 단점과 극복</h4>
+                            <blockquote class="cl-quote small">"개인의 확신보다 팀의 '합리적 합의'를 우선하며, 치열한 논의를 객관적 성과로 전환합니다."</blockquote>
+                            <p><strong>단점:</strong> 다소 자기 주장이 강해 보일 때가 있습니다.</p>
+                            <ul class="cl-list effort">
+                                <li><strong>근거:</strong> 독단이 되지 않도록, 객관적인 지표나 근거를 제시</li>
+                                <li><strong>보완:</strong> 충돌 의견을 '리스크 검증' 단계로 수용</li>
+                                <li><strong>합의:</strong> 양측의 강점을 결합한 더 발전된 대안 도출</li>
+                            </ul>
+                            <div class="cl-example">
+                                <span class="cl-example-label">사례</span>
+                                <p>'둥둥아일랜드' 도움말 UI에서 의견 충돌 발생 → 레퍼런스 교차 검증 + 예비 유저 60명 리서치 수행 → 데이터 기반으로 기획 수정하여 성공적으로 마무리</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CL Slider controls -->
+            <div class="cl-controls">
+                <button class="slider-btn cl-prev" id="cl-prev" aria-label="이전 항목">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <span class="cl-indicator" id="cl-indicator">1 / 5</span>
+                <button class="slider-btn cl-next" id="cl-next" aria-label="다음 항목">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cl-page-footer">
+        <p><a href="index.html">← 포트폴리오로 돌아가기</a></p>
+        <p style="margin-top: 12px;">© 2026 Kim Changhyun. All rights reserved.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const clTabs = document.querySelectorAll('.cl-tab');
+            const clPanels = document.querySelectorAll('.cl-panel');
+            const clPrevBtn = document.getElementById('cl-prev');
+            const clNextBtn = document.getElementById('cl-next');
+            const clIndicator = document.getElementById('cl-indicator');
+            let currentCL = 0;
+            const totalCL = 5;
+
+            function goToCL(index) {
+                if (index < 0) index = totalCL - 1;
+                if (index >= totalCL) index = 0;
+                currentCL = index;
+
+                clTabs.forEach((tab, i) => {
+                    tab.classList.toggle('active', i === currentCL);
+                });
+
+                clPanels.forEach((panel, i) => {
+                    panel.classList.toggle('active', i === currentCL);
+                });
+
+                clIndicator.textContent = `${currentCL + 1} / ${totalCL}`;
+
+                clTabs[currentCL].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+                if (currentCL === 1) {
+                    setTimeout(animateBars, 300);
+                }
+            }
+
+            clTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    goToCL(parseInt(tab.getAttribute('data-cl')));
+                });
+            });
+
+            clPrevBtn.addEventListener('click', () => goToCL(currentCL - 1));
+            clNextBtn.addEventListener('click', () => goToCL(currentCL + 1));
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') goToCL(currentCL - 1);
+                if (e.key === 'ArrowRight') goToCL(currentCL + 1);
+            });
+
+            function animateBars() {
+                const bars = document.querySelectorAll('.cl-bar');
+                bars.forEach(bar => {
+                    const width = bar.style.getPropertyValue('--bar-width');
+                    bar.style.width = '0%';
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            bar.style.width = width;
+                        });
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

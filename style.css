@@ -8,11 +8,11 @@
 }
 
 :root {
-    /* Calm, sophisticated palette */
-    --bg-primary: #0f1117;
-    --bg-secondary: #161922;
-    --bg-card: #1c1f2e;
-    --bg-card-hover: #242838;
+    /* Calm, sophisticated palette — lightened dark tones */
+    --bg-primary: #1a1e2e;
+    --bg-secondary: #212639;
+    --bg-card: #272b3e;
+    --bg-card-hover: #2f3448;
     --bg-surface: #f7f8fc;
     --bg-surface-alt: #eef0f7;
 
@@ -30,7 +30,7 @@
     --accent-green: #5ce0a8;
     --accent-green-glow: rgba(92, 224, 168, 0.2);
 
-    --border-color: rgba(255, 255, 255, 0.06);
+    --border-color: rgba(255, 255, 255, 0.08);
     --border-light: rgba(0, 0, 0, 0.06);
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.12);
     --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.18);
@@ -77,7 +77,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(15, 17, 23, 0.85);
+    background: rgba(26, 30, 46, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
@@ -85,7 +85,7 @@ body {
 }
 
 #main-nav.scrolled {
-    background: rgba(15, 17, 23, 0.95);
+    background: rgba(26, 30, 46, 0.95);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -159,10 +159,33 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-primary);
+    background: #0a0e1a;
     position: relative;
     overflow: hidden;
     padding: 100px 24px 60px;
+}
+
+.hero-video-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero-video-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    filter: blur(3px);
+    transform: scale(1.05);
+}
+
+.hero-video-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(10,14,26,0.82), rgba(26,30,46,0.7));
 }
 
 .hero-bg-shapes {
@@ -435,6 +458,18 @@ body {
     color: var(--text-primary);
 }
 
+/* ===== LIGHT OVERRIDES for previously-dark sections ===== */
+#career,
+#skills {
+    background: #eef1f9;
+    color: var(--text-dark);
+    --bg-card: #ffffff;
+    --bg-card-hover: #f5f7fc;
+    --text-primary: #1a1d2e;
+    --text-secondary: #5a6178;
+    --border-color: rgba(0, 0, 0, 0.08);
+}
+
 .section-title {
     font-family: var(--font-heading);
     font-size: 2rem;
@@ -638,9 +673,9 @@ body {
 }
 
 .career-card:hover {
-    border-color: rgba(108, 140, 255, 0.2);
+    border-color: rgba(108, 140, 255, 0.3);
     transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 12px 36px rgba(108, 140, 255, 0.12);
 }
 
 .career-card:hover::before {
@@ -714,9 +749,9 @@ body {
 .metric {
     text-align: center;
     padding: 10px 4px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.03);
     border-radius: var(--radius-sm);
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .metric-value {
@@ -747,10 +782,10 @@ body {
     font-size: 0.7rem;
     font-weight: 500;
     color: var(--text-secondary);
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(0, 0, 0, 0.04);
     padding: 4px 10px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 /* ===== PROJECT SLIDER ===== */
@@ -774,21 +809,21 @@ body {
 }
 
 .slide-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
+    display: flex;
+    flex-direction: column;
     background: #fff;
     border-radius: var(--radius-xl);
     overflow: hidden;
     border: 1px solid var(--border-light);
     box-shadow: var(--shadow-md);
-    min-height: 420px;
 }
 
 .slide-media {
     position: relative;
     overflow: hidden;
     background: var(--bg-surface-alt);
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 .media-placeholder {
@@ -841,10 +876,11 @@ body {
 }
 
 .slide-info {
-    padding: 40px 36px;
+    padding: 32px 36px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .slide-tag {
@@ -988,9 +1024,9 @@ body {
 }
 
 .ai-tool-card:hover {
-    border-color: rgba(108, 140, 255, 0.2);
+    border-color: rgba(108, 140, 255, 0.3);
     transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 8px 24px rgba(108, 140, 255, 0.12);
 }
 
 .tool-logo-wrapper {
@@ -1193,9 +1229,10 @@ body {
     background: var(--bg-card-hover);
 }
 
+/* 1. 활성화 탭: 배경을 완전한 포인트 색상(불투명)으로 꽉 채움 */
 .cl-tab.active {
     border-color: var(--accent);
-    background: rgba(108, 140, 255, 0.1);
+    background: var(--accent);
 }
 
 .cl-tab-num {
@@ -1211,9 +1248,10 @@ body {
     color: var(--text-secondary);
 }
 
+/* 2. 활성화 탭 안의 숫자: 배경은 하얗게, 숫자는 포인트 색상으로 반전 처리 */
 .cl-tab.active .cl-tab-num {
-    background: var(--accent);
-    color: #fff;
+    background: #ffffff;
+    color: var(--accent);
 }
 
 .cl-tab-title {
@@ -1222,8 +1260,9 @@ body {
     color: var(--text-secondary);
 }
 
+/* 3. 활성화 탭 안의 텍스트: 완전한 흰색으로 변경하여 눈에 잘 띄게 수정 */
 .cl-tab.active .cl-tab-title {
-    color: var(--text-primary);
+    color: #ffffff;
     font-weight: 600;
 }
 
@@ -1462,9 +1501,11 @@ body {
 
 /* ===== FOOTER ===== */
 #footer {
-    background: var(--bg-secondary);
+    background: #e4e8f2;
     padding: 40px 0;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    --text-primary: #1a1d2e;
+    --text-secondary: #5a6178;
 }
 
 .footer-content {
@@ -1526,7 +1567,7 @@ body {
         top: 64px;
         left: 0;
         right: 0;
-        background: rgba(15, 17, 23, 0.98);
+        background: rgba(26, 30, 46, 0.98);
         flex-direction: column;
         padding: 16px;
         border-bottom: 1px solid var(--border-color);
@@ -1577,12 +1618,8 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .slide-inner {
-        grid-template-columns: 1fr;
-    }
-
-    .media-placeholder {
-        min-height: 240px;
+    .slide-media {
+        aspect-ratio: 4 / 3;
     }
 
     .slide-info {
@@ -1659,10 +1696,41 @@ body {
 .slide-media img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .slide-media a {
     display: block;
     width: 100%;
     height: 100%;
+}
+/* ===== PROJECT HERO BACKGROUND ===== */
+.project-video-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.project-video-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4; /* 투명도를 낮춰 콘텐츠 강조 */
+    filter: blur(15px); /* 배경을 흐릿하게 처리 */
+    transform: scale(1.1); /* 블러 처리 시 가장자리가 비는 현상 방지 */
+    transition: opacity 0.3s ease;
+}
+
+.project-video-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* 프로젝트 섹션 배경색(var(--bg-surface))을 반투명하게 덮어 텍스트 가독성 확보 */
+    background: linear-gradient(to bottom, rgba(247, 248, 252, 0.2), rgba(247, 248, 252, 0.95));
+}
+
+/* 배경 위로 기존 콘텐츠(글씨, 슬라이더)가 올라오도록 설정 */
+#projects .container {
+    position: relative;
+    z-index: 2;
 }

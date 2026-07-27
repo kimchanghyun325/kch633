@@ -118,6 +118,24 @@ document.addEventListener('DOMContentLoaded', () => {
         dots.forEach((d, i) => {
             d.classList.toggle('active', i === currentSlide);
         });
+
+// --- 프로젝트 슬라이드 배경 연동 로직 수정 ---
+        const slides = document.querySelectorAll('.slide');
+        if (slides[currentSlide]) {
+            // 현재 활성화된 슬라이드의 GIF 경로 가져오기
+            const imgSrc = slides[currentSlide].querySelector('.slide-media img').getAttribute('src');
+            const projectBg = document.getElementById('project-bg-img');
+            
+            // getAttribute를 사용해 상대경로를 정확히 비교
+            if (projectBg && projectBg.getAttribute('src') !== imgSrc) {
+                // 부드러운 전환 효과를 위해 잠시 투명하게 만들었다가 소스 교체 후 복구
+                projectBg.style.opacity = '0';
+                setTimeout(() => {
+                    projectBg.setAttribute('src', imgSrc);
+                    projectBg.style.opacity = '0.4'; // CSS의 투명도(0.4)와 동일하게 맞춤
+                }, 300);
+            }
+        }
     }
 
     prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
@@ -147,65 +165,73 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
 
     // ---- Cover Letter Tabs/Slider ----
-    const clTabs = document.querySelectorAll('.cl-tab');
-    const clPanels = document.querySelectorAll('.cl-panel');
     const clPrevBtn = document.getElementById('cl-prev');
     const clNextBtn = document.getElementById('cl-next');
     const clIndicator = document.getElementById('cl-indicator');
-    let currentCL = 0;
-    const totalCL = 5;
 
-    function goToCL(index) {
-        if (index < 0) index = totalCL - 1;
-        if (index >= totalCL) index = 0;
-        currentCL = index;
+    if (clPrevBtn && clNextBtn && clIndicator) {
+        const clTabs = document.querySelectorAll('.cl-tab');
+        const clPanels = document.querySelectorAll('.cl-panel');
+        let currentCL = 0;
+        const totalCL = 5;
 
-        clTabs.forEach((tab, i) => {
-            tab.classList.toggle('active', i === currentCL);
-        });
+        function goToCL(index) {
+            if (index < 0) index = totalCL - 1;
+            if (index >= totalCL) index = 0;
+            currentCL = index;
 
-        clPanels.forEach((panel, i) => {
-            panel.classList.toggle('active', i === currentCL);
-        });
+            clTabs.forEach((tab, i) => {
+                tab.classList.toggle('active', i === currentCL);
+            });
 
-        clIndicator.textContent = `${currentCL + 1} / ${totalCL}`;
+            clPanels.forEach((panel, i) => {
+                panel.classList.toggle('active', i === currentCL);
+            });
 
-        // Scroll active tab into view
-        clTabs[currentCL].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            clIndicator.textContent = `${currentCL + 1} / ${totalCL}`;
 
-        // Animate bars if Panel 2
-        if (currentCL === 1) {
-            setTimeout(animateBars, 300);
+            // Scroll active tab into view
+            if (clTabs[currentCL]) {
+                clTabs[currentCL].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+
+            // Animate bars if Panel 2
+            if (currentCL === 1) {
+                setTimeout(animateBars, 300);
+            }
         }
+
+        clTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                goToCL(parseInt(tab.getAttribute('data-cl')));
+            });
+        });
+
+        clPrevBtn.addEventListener('click', () => goToCL(currentCL - 1));
+        clNextBtn.addEventListener('click', () => goToCL(currentCL + 1));
+
+        // Keyboard support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                const clSection = document.getElementById('cover-letter');
+                if (clSection) {
+                    const rect = clSection.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        goToCL(currentCL - 1);
+                    }
+                }
+            }
+            if (e.key === 'ArrowRight') {
+                const clSection = document.getElementById('cover-letter');
+                if (clSection) {
+                    const rect = clSection.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        goToCL(currentCL + 1);
+                    }
+                }
+            }
+        });
     }
-
-    clTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            goToCL(parseInt(tab.getAttribute('data-cl')));
-        });
-    });
-
-    clPrevBtn.addEventListener('click', () => goToCL(currentCL - 1));
-    clNextBtn.addEventListener('click', () => goToCL(currentCL + 1));
-
-    // Keyboard support
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            // Check if cover letter is in view
-            const clSection = document.getElementById('cover-letter');
-            const rect = clSection.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                goToCL(currentCL - 1);
-            }
-        }
-        if (e.key === 'ArrowRight') {
-            const clSection = document.getElementById('cover-letter');
-            const rect = clSection.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                goToCL(currentCL + 1);
-            }
-        }
-    });
 
     // ---- Bar Animation ----
     function animateBars() {
@@ -251,9 +277,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---- Smooth scroll for anchor links ----
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            if (!href || href === '#') return;
+            const target = document.querySelector(href);
             if (target) {
+                e.preventDefault();
                 target.scrollIntoView({ behavior: 'smooth' });
             }
         });
